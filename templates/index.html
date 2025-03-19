@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block header %}
+<h1>Halaman Home</h1>
+{% if list_user %}
+<ul>
+  {% for user in list_user %}
+  <li>
+    <div>
+      ID: {{ user.id }}<br />
+      Nama: {{ user.full_name }}<br />
+      Email: {{ user.email }}<br />
+    </div>
+  </li>
+  <br />
+  {% endfor %}
+</ul>
+{% else %}
+<p>User Tidak Tersedia</p>
+{% endif %} {% endblock %}
